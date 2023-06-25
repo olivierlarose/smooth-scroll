@@ -9,7 +9,12 @@ import Projects from '../components/Projects';
 export default function Home() {
 
   useEffect( () => {
-    const locomotiveScroll = new LocomotiveScroll();
+    (
+      async () => {
+          const LocomotiveScroll = (await import('locomotive-scroll')).default
+          const locomotiveScroll = new LocomotiveScroll();
+      }
+    )()
   }, [])
 
   return (
