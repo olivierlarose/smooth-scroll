@@ -9,7 +9,6 @@ export default function Index() {
 
     const background = useRef(null);
     const introImage = useRef(null);
-    const homeHeader = useRef(null);
 
     useLayoutEffect( () => {
         gsap.registerPlugin(ScrollTrigger);
@@ -29,7 +28,7 @@ export default function Index() {
     }, [])
 
     return (
-        <div ref={homeHeader} className={styles.homeHeader}>
+        <div className={styles.homeHeader}>
             <div className={styles.backgroundImage} ref={background}>
                 <Image 
                     src={'/images/background.jpeg'}
